@@ -1,14 +1,11 @@
 // isPrime - Returns true or false, indicating whether the given number is prime.
 function isPrime (numb) {
-    if (numb === 0 || numb === 1) {
-        return false
-    }
-    for (let i = 2; i <= Math.sqrt(numb); i = i + 2) {
+    for (let i = 2, s = Math.sqrt(numb); i <= s; i++) {
         if (numb % i === 0) {
             return false
         }
     }
-    return true
+    return numb > 1
 }
 
 isPrime(0)                          // false
